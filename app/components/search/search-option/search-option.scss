@@ -1,0 +1,31 @@
+.search-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: $primary-color;
+  font-size: 0.7rem;
+
+  padding: 5px;
+  margin: 2px;
+
+  background-color: $panel-bg-color;
+  border: 1px solid $panel-border-color;
+  box-shadow: 1px 1px 1px $panel-shadow-color;
+
+  &.active {
+    background-color: $primary-bg-color;
+  }
+
+  > i {
+    flex: none;
+    margin-right: 5px;
+  }
+
+  > span {
+    cursor: pointer;
+    flex: 1;
+    text-transform: uppercase;
+    margin: 2px 0;
+  }
+}

@@ -1,0 +1,86 @@
+.search {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  > .search-query {
+    flex: none;
+
+    background-color: $panel-bg-color;
+    box-shadow: 1px 1px 1px $panel-shadow-color;
+    border: 1px solid $panel-border-color;
+
+    > input {
+      color: $primary-color;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  > .search-controls {
+    display: flex;
+    flex-direction: column;
+
+    flex: none;
+
+    margin-top: 10px;
+    padding: 5px;
+
+    background-color: $panel-bg-color;
+    box-shadow: 1px 1px 1px $panel-shadow-color;
+    border: 1px solid $panel-border-color;
+
+    > .search-order-types, > .search-orders {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    > .search-option {
+      flex: none;
+    }
+  }
+
+  > .search-results {
+    margin: 10px 0 5px;
+
+      > .client {
+        padding: 10px;
+        margin-bottom: 5px;
+
+        background-color: $panel-bg-color;
+        box-shadow: 1px 1px 1px $panel-shadow-color;
+        border: 1px solid $panel-border-color;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        > .operating-system, > .username {
+          display: block;
+          color: $primary-color;
+          font-size: 1.5rem;
+        }
+
+        > .operating-system {
+          float: right;
+        }
+
+        > .username {
+          margin-bottom: 5px;
+        }
+
+        > .last-seen, > .connections, > .average-connected-time {
+          display: block;
+          color: $secondary-color;
+          font-size: 0.65rem;
+          padding: 2px;
+      }
+    }
+  }
+}

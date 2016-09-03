@@ -1,0 +1,120 @@
+header {
+  z-index: 2;
+
+  display: flex;
+  flex-direction: row;
+
+  flex: none;
+
+  width: 100%;
+  padding: 15px 0;
+
+  background-color: $header-bg-color;
+  box-shadow: 1px 1px 1px $header-shadow-color;
+  border-bottom: 1px solid $header-border-color;
+
+  .brand {
+    flex: none;
+
+    color: $brand-color;
+    font-size: 1.5rem;
+    text-align: left;
+
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+
+
+  .nav {
+    display: flex;
+    flex-direction: row-reverse;
+
+    flex: 1;
+
+    padding: 0.2rem;
+
+    .nav-mobile {
+      display: none;
+      flex: none;
+      margin: 0.30rem;
+
+      > span {
+        cursor: pointer;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+
+        padding: 0.25rem 0.35rem;
+
+        border: 1px solid $panel-border-color;
+        box-shadow: 1px 1px 1px $header-shadow-color;
+      }
+
+      > .nav-items {
+        display: none;
+        position: absolute;
+
+        flex-direction: column;
+
+        padding: 0.25rem 0.35rem;
+        margin: 0.8rem 0.35rem 0.35rem -1.40rem;
+        border: 1px solid $panel-border-color;
+        background-color: $panel-bg-color;
+        box-shadow: 1px 1px 1px $panel-shadow-color;
+
+        @media screen and (max-width: $break-xsmall) {
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: $break-xsmall) {
+        display: block;
+      }
+    }
+
+    .nav-items {
+      display: flex;
+      flex-direction: row;
+
+      flex: none;
+
+      li {
+        flex: none;
+        margin: 0 0.25rem;
+
+        &.active a {
+          color: $nav-active-color;
+        }
+
+        a {
+          color: $nav-color;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+
+          margin: 0 5px;
+
+          @media screen and (max-width: $break-xsmall) {
+           margin: 0;
+          }
+        }
+
+        @media screen and (max-width: $break-xsmall) {
+          flex: 1;
+          padding: 0.25rem 0;
+        }
+      }
+
+      @media screen and (max-width: $break-xsmall) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: $break-xsmall) {
+      padding: 0;
+    }
+  }
+
+
+  @media screen and (max-width: $break-xsmall) {
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,17 @@
+.statistic {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  > .content {
+    padding: 10px 5px !important;
+  }
+
+  canvas {
+    min-height: 225px;
+  }
+}

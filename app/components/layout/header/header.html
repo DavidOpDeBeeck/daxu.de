@@ -1,0 +1,21 @@
+<header>
+  <a href="#/overview" class="brand">Daxude</a>
+  <section class="nav">
+    <section class="nav-mobile" ng-click="header.nav.toggle()">
+      <span>
+        <i class="fa fa-caret-up" aria-hidden="true" ng-show="header.nav.isVisible()"></i>
+        <i class="fa fa-caret-down" aria-hidden="true" ng-show="!header.nav.isVisible()"></i> Menu
+      </span>
+      <ul class="nav-items" ng-show="header.nav.isVisible()">
+        <li ng-repeat="item in nav.items" ng-class="{'active' : header.nav.isActive(item)}">
+          <a href="#{{item.link}}">{{item.text}}</a>
+        </li>
+      </ul>
+    </section>
+    <ul class="nav-items">
+      <li ng-repeat="item in header.nav.items" ng-class="{'active' : header.nav.isActive(item)}">
+        <a href="#{{item.link}}">{{item.text}}</a>
+      </li>
+    </ul>
+  </section>
+</header>

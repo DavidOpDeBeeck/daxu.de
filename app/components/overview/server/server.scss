@@ -1,0 +1,132 @@
+.server-panel-container {
+  flex: initial;
+
+  width: calc(100% / 6);
+  min-width: 240px;
+
+  padding: 0 5px;
+
+  &:first-child {
+    padding-left: 10px;
+  }
+
+  &:last-child {
+    padding-right: 10px;
+  }
+
+  .server-panel {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+
+    flex: initial;
+
+    height: 100%;
+
+    background-color: $panel-bg-color;
+    border: 1px solid $panel-border-color;
+    box-shadow: 1px 1px 1px $panel-shadow-color;
+
+    .server-panel-header {
+      flex: none;
+      padding: 10px 0;
+      border-bottom: 1px solid $panel-border-color;
+
+      > h1 {
+        flex: 1;
+        color: $primary-color;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    .server-panel-body {
+      flex: none;
+      padding: 10px;
+      border-bottom: 1px solid $panel-border-color;
+
+      > span {
+        flex: 1;
+        color: $primary-color;
+        font-size: 0.7rem;
+      }
+    }
+
+    .server-panel-clients {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      .client-search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        flex: none;
+
+        border-bottom: 1px solid $panel-border-color;
+
+        > i {
+          flex: none;
+          font-size: 0.7rem;
+          padding: 10px;
+        }
+
+        > input {
+          flex: 1;
+
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          padding: 10px 5px 10px 0;
+
+          background-color: $panel-bg-color;
+        }
+      }
+
+      .client-list {
+        display: flex;
+        flex-direction: column;
+
+        flex: 1;
+
+        .client-panel {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+
+          flex: none;
+
+          border-bottom: 1px solid $panel-border-color;
+
+          > i, > span {
+            color: $primary-color;
+            font-size: 0.7rem;
+            padding: 10px;
+          }
+
+          > i {
+            flex: none;
+          }
+
+          > span {
+            padding-left: 0;
+            text-transform: uppercase;
+          }
+
+          .time-connected {
+            flex: none;
+            text-align: right;
+          }
+
+          .username {
+            flex: 1;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

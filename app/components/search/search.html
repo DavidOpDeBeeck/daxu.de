@@ -1,0 +1,30 @@
+<section class="search inner">
+  <section class="search-query">
+    <input type="text" placeholder="Search a client" ng-model="search.query" ng-change="search.search()" />
+  </section>
+  <section class="search-controls">
+      <section class="search-order-types">
+          <search-option name="ASC" value="false" option="search.orderDir"></search-option>
+          <search-option name="DESC" value="true" option="search.orderDir"></search-option>
+      </section>
+      <section class="search-orders">
+          <search-option name="Username" value="username" option="search.orderProp"></search-option>
+          <search-option name="Connections" value="total_connections" option="search.orderProp"></search-option>
+          <search-option name="Average Connected Time" value="average_connected_time" option="search.orderProp"></search-option>
+          <search-option name="Last Connected" value="last_connected" option="search.orderProp"></search-option>
+      </section>
+  </section>
+  <section class="search-results">
+    <section class="client" ng-repeat="client in search.clients | orderBy : search.orderProp : search.orderDirection() track by $index" ng-class="'ease-in'">
+      <span class="operating-system" ng-repeat="occurrence in client.platforms">
+        <i class="fa fa-windows" ng-if="occurrence.value == 'Windows'"></i>
+        <i class="fa fa-apple" ng-if="occurrence.value == 'OS X' || occurrence.value == 'IOS'"></i>
+        <i class="fa fa-android" ng-if="occurrence.value == 'Android'"></i>
+      </span>
+      <span class="username">{{ client.user_name }}</span>
+      <span class="connections">{{ client.total_connections }} total connections</span>
+      <span class="average-connected-time">{{ client.average_connected_time_text }} average connected time</span>
+      <span class="last-seen">Last seen on {{ client.last_connected }}</span>
+    </section>
+  </section>
+</section>

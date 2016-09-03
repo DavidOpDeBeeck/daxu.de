@@ -1,0 +1,10 @@
+<footer>
+  <span class="last-updated">{{ footer.lastUpdated }}</span>
+  <section class="status">
+    <span ng-class="footer.status.text">
+      <i class="fa" ng-class="footer.status.online ? 'fa-check' : 'fa-exclamation-triangle'" aria-hidden="true"></i>
+      {{ footer.status.text }}
+    </span>
+  </section>
+  <span class="version">version {{ footer.version }}</span>
+</footer>

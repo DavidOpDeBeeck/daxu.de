@@ -1,0 +1,78 @@
+.rankings {
+  width: 100%;
+  
+  .ranking {
+    display: block;
+    float: left;
+
+    &:nth-child(1), &:nth-child(2) {
+      display: block;
+      float: left;
+      width: calc(50% - 5px);
+      margin-bottom: 10px;
+
+      @media screen and (max-width: $break-xsmall) {
+        width: 100%;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-left: 10px;
+
+      @media screen and (max-width: $break-xsmall) {
+        margin-left: 0;
+      }
+    }
+
+    .load-more {
+      cursor: pointer;
+      text-align: center;
+
+      padding: 12px 0;
+      margin: 0 10px;
+
+      border-top: 1px solid $panel-border-color;
+    }
+
+    .content {
+      padding: 0 5px;
+    }
+
+    .client {
+      display: flex;
+      flex-direction: row;
+
+      overflow: auto;
+      padding: 10px;
+
+      > span {
+        color: $primary-color;
+
+        &:nth-child(1) {
+          flex: none;
+        }
+
+        &:nth-child(2) {
+          flex: 1;
+          text-align: right;
+        }
+
+        > i {
+          margin-right: 5px;
+        }
+      }
+
+      &.gold > span {
+        color: $gold-color;
+      }
+
+      &.silver > span {
+        color: $silver-color;
+      }
+
+      &.bronze > span {
+        color: $bronze-color;
+      }
+    }
+  }
+}

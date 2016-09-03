@@ -1,0 +1,15 @@
+<section class="panel ranking">
+  <h1 class="title">Most Connections</h1>
+  <section class="content">
+    <section class="client" ng-repeat="client in mostConnectionsRanking.clients" ng-class="{ 'gold' : $index === 0, 'silver' : $index === 1, 'bronze' : $index === 2}">
+      <span>
+        <i ng-show="$index < 3" class="fa fa-trophy" aria-hidden="true"></i>
+        {{ client.user_name }}
+      </span>
+      <span>{{ client.total_connections }}</span>
+    </section>
+  </section>
+  <section class="load-more">
+    <span ng-click="mostConnectionsRanking.loadMore()">Load more</span>
+  </section>
+</section>

@@ -1,0 +1,15 @@
+<section class="panel ranking">
+  <h1 class="title">Average Time Connected</h1>
+  <section class="content">
+    <section class="client" ng-repeat="client in mostAverageTimeConnectedRanking.clients" ng-class="{ 'gold' : $index === 0, 'silver' : $index === 1, 'bronze' : $index === 2}">
+      <span>
+        <i ng-show="$index < 3" class="fa fa-trophy" aria-hidden="true"></i>
+        {{ client.user_name }}
+      </span>
+      <span>{{ client.average_time_connected_text }}</span>
+    </section>
+  </section>
+  <section class="load-more">
+    <span ng-click="mostAverageTimeConnectedRanking.loadMore()">Load more</span>
+  </section>
+</section>
