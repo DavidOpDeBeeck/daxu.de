@@ -3,7 +3,7 @@
 
     class OverviewController {
         constructor(API) {
-            this.virtualservers = API.LiveVirtualServers.query();
+          API.LiveVirtualServers.query({}, (virtualservers) => this.virtualservers = virtualservers );
         }
     }
 

@@ -13,7 +13,11 @@
             }).state('join', {
                 url: "/join/:virtualServerId",
                 templateUrl: 'assets/templates/join.html',
-                controller: 'JoinController as join'
+                controller: 'JoinController as join',
+                resolve : {
+                  virtualServerId : $stateParams => $stateParams["virtualServerId"],
+                  password : $stateParams => $stateParams["password"]
+                }
             }).state('server', {
                 url: "/server/:virtualServerId",
                 templateUrl: 'assets/templates/server-view.html',

@@ -5,7 +5,6 @@ var gulpNgConfig = require('gulp-ng-config');
 var sass = require('gulp-sass');
 var babel = require('gulp-babel');
 var flatten = require('gulp-flatten');
-var watch = require('gulp-watch');
 
 // CLEAN
 

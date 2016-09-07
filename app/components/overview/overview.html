@@ -1,3 +1,5 @@
 <section class="overview">
-  <server server-info="server" ng-repeat="server in overview.virtualservers | orderBy : 'online_clients' : true"></server>
+  <virtualserver-panel id="server.id"
+    ng-repeat="server in overview.virtualservers | orderBy : 'online_clients' : true">
+  </virtualserver-panel>
 </section>

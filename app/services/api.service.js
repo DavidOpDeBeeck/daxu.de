@@ -4,7 +4,6 @@
         .factory( "API", apiService )
 
     function apiService ( $resource , apiUrl ) {
-
         return {
           LiveHost                    : $resource( apiUrl + "/live/host/1" ) ,
           LiveClients                 : $resource( apiUrl + "/live/host/1/clients" ) ,
@@ -23,6 +22,5 @@
           Report                      : $resource( apiUrl + "/report" ),
           WhoAmI                      : $resource( apiUrl + "/whoami" )
         }
-
     };
 } )();

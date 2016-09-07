@@ -1,0 +1,17 @@
+<section class="virtualserver-panel-container">
+  <section class="virtualserver-panel">
+    <h1 class="virtualserver-name">{{ ::virtualserver.name }}</h1>
+    <virtualserver-client-graph id="virtualserver.id"></virtualserver-client-graph>
+    <section class="virtualserver-client-list">
+      <section class="virtualserver-client-search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" placeholder="Search a client" ng-model="client.filter" />
+      </section>
+      <section class="virtualserver-client-list" ng-scrollbars>
+        <virtualserver-client-panel info="client"
+            ng-repeat="client in virtualserver.clients | orderBy : 'time_connected' : true | filter : { user_name : client.filter }">
+        </virtualserver-client-panel>
+      </section>
+    </section>
+  </section>
+</section>
