@@ -1,14 +1,10 @@
 header {
-  z-index: 2;
-
   display: flex;
+  z-index: 3;
   flex-direction: row;
-
   flex: none;
-
   width: 100%;
   padding: 15px 0;
-
   background-color: $header-bg-color;
   box-shadow: 1px 1px 1px $header-shadow-color;
   border-bottom: 1px solid $header-border-color;

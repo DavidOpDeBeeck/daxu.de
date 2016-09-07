@@ -1,22 +1,16 @@
-<section class="server-panel-container">
-  <section class="server-panel">
-    <section class="server-panel-header">
-      <h1>{{ server.name }}</h1>
-    </section>
-    <section class="server-panel-body">
+<section class="server-container">
+  <section class="server">
+    <h1 class="server-name">{{ ::server.name }}</h1>
+    <section class="server-client-graph">
       <client-graph online="server.online_clients" max="server.max_clients"></client-graph>
     </section>
-    <section class="server-panel-clients">
+    <section class="server-client-list">
       <section class="client-search">
         <i class="fa fa-search" aria-hidden="true"></i>
-        <input type="text" placeholder="Search a client" ng-model="clientList.filter" />
+        <input type="text" placeholder="Search a client" ng-model="client.filter" />
       </section>
       <section class="client-list" ng-scrollbars>
-        <section class="client-panel" ng-repeat="client in server.clients | orderBy : 'time_connected' : true | filter : { user_name : clientList.filter }">
-          <i class="fa fa-user" aria-hidden="true"></i>
-          <span class="username">{{ client.user_name }}</span>
-          <span class="time-connected">{{ client.time_connected_text }}</span>
-        </section>
+        <client client-info="client" ng-repeat="client in server.clients | orderBy : 'time_connected' : true | filter : { user_name : client.filter }"></client>
       </section>
     </section>
   </section>

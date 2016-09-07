@@ -1,0 +1,32 @@
+.server {
+  .client {
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    border-bottom: 1px solid $panel-border-color;
+
+    > i, > span {
+      color: $primary-color;
+      font-size: 0.7rem;
+      padding: 10px;
+    }
+
+    > i {
+      flex: none;
+    }
+
+    > span {
+      padding-left: 0;
+      text-transform: uppercase;
+    }
+
+    > .client-time-connected {
+      flex: none;
+    }
+
+    > .client-username {
+      flex: 1;
+      text-align: left;
+    }
+  }
+}

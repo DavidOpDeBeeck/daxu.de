@@ -1,4 +1,4 @@
 <span class="search-option" ng-class="{ 'active' : searchOption.isSelected() }" ng-click="searchOption.toggleActive()">
   <i class="fa" ng-class="searchOption.isSelected() ? 'fa-check' : 'fa-times'"></i>
-  <span>{{ searchOption.name }}</span>
+  <span>{{ ::searchOption.name }}</span>
 </span>

@@ -4,9 +4,9 @@
     <section class="client" ng-repeat="client in mostAverageTimeConnectedRanking.clients" ng-class="{ 'gold' : $index === 0, 'silver' : $index === 1, 'bronze' : $index === 2}">
       <span>
         <i ng-show="$index < 3" class="fa fa-trophy" aria-hidden="true"></i>
-        {{ client.user_name }}
+        {{ ::client.user_names | largestOccurence }}
       </span>
-      <span>{{ client.average_time_connected_text }}</span>
+      <span>{{ ::client.average_connected_time | msToTime }}</span>
     </section>
   </section>
   <section class="load-more">

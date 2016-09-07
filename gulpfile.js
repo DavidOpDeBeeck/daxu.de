@@ -5,6 +5,7 @@ var gulpNgConfig = require('gulp-ng-config');
 var sass = require('gulp-sass');
 var babel = require('gulp-babel');
 var flatten = require('gulp-flatten');
+var watch = require('gulp-watch');
 
 // CLEAN
 
@@ -30,21 +31,21 @@ gulp.task('clean', ['clean-js', 'clean-css', 'clean-html']);
 
 // MAIN
 
-gulp.task('config', ['clean'], () => {
+gulp.task('config', () => {
   return gulp
     .src('config.json')
     .pipe(gulpNgConfig('daxude.config', { createModule: false }))
     .pipe(gulp.dest('./app/config/'))
 });
 
-gulp.task('concat-js', ['clean'], () => {
+gulp.task('concat-js', ['clean-js'], () => {
   return gulp
     .src([ './app/app.*.js','./app/**/*.js' ])
     .pipe(concat('app.js'))
     .pipe(gulp.dest('./assets/js/'));
 });
 
-gulp.task('concat-css', ['clean'], () => {
+gulp.task('concat-css', ['clean-css'], () => {
   return gulp
     .src('./app/**/*.scss')
     .pipe(concat('app.scss'))
@@ -74,17 +75,17 @@ gulp.task('babel', ['clean-js', 'concat-js'], () => {
 
 // WATCHERS
 
-gulp.task('sass:watch', () => {
+gulp.task('sass-watch', () => {
   gulp.watch('./app/**/*.scss', ['sass']);
 });
 
-gulp.task('babel:watch', () => {
+gulp.task('babel-watch', () => {
   gulp.watch('./app/**/*.js', ['babel']);
 });
 
-gulp.task('template:watch', () => {
+gulp.task('template-watch', () => {
   gulp.watch('./app/**/*.html', ['move-html']);
 });
 
 gulp.task('default', ['clean', 'config', 'concat-js', 'concat-css', 'move-html', 'sass', 'babel']);
-gulp.task('watch', ['clean', 'sass:watch', 'babel:watch', 'template:watch']);
+gulp.task('watch', ['sass-watch', 'babel-watch', 'template-watch']);

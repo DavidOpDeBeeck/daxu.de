@@ -3,14 +3,14 @@
     angular.module( 'daxude.controllers' )
         .controller( "OnlineClientsStatisticController", OnlineClientsStatisticController );
 
-    function OnlineClientsStatisticController ( API , STAT_UTIL ) {
+    function OnlineClientsStatisticController ( API , StatUtils ) {
 
         let vm = this;
 
         ///////////////////
 
         vm.graph = {
-            labels      : STAT_UTIL.dayLabels(),
+            labels      : StatUtils.dayLabels(),
             data        : [],
             series      : [],
             options     : {
@@ -43,14 +43,13 @@
 
                     if ( series.indexOf( reportDate ) < 0 ) {
                         series.push( reportDate );
-                        data.push( STAT_UTIL.dayNullArray() );
+                        data.push( StatUtils.dayNullArray() );
                     }
 
                     let reportDateIndex = series.indexOf( reportDate );
 
                     if ( !report.failed ) {
-                        if ( data[ reportDateIndex ][ reportHour ] == undefined )
-                            data[ reportDateIndex ][ reportHour ] = 0;
+                        if ( data[ reportDateIndex ][ reportHour ] == undefined ) data[ reportDateIndex ][ reportHour ] = 0;
                         data[ reportDateIndex ][ reportHour ] += report.max_clients;
                     }
                 });

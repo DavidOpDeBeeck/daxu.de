@@ -7,6 +7,7 @@
         'daxude.controllers',
         'daxude.directives',
         'daxude.services',
+        'daxude.filters',
         'daxude.routes'
     ] );
 } )();

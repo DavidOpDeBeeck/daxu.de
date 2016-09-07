@@ -3,7 +3,7 @@
     angular.module( 'daxude.controllers' )
         .controller( "MostAverageTimeConnectedRankingController", MostAverageTimeConnectedRankingController );
 
-    function MostAverageTimeConnectedRankingController ( API , UTIL ) {
+    function MostAverageTimeConnectedRankingController ( API ) {
 
         let vm = this;
 
@@ -24,11 +24,7 @@
                 'limit'  : 10 ,
                 'offset' : vm.clients.length
             } , clients => {
-                vm.clients = vm.clients.concat(clients.map( client => {
-                    client.user_name = UTIL.findLargestOccurence( client.user_names );
-                    client.average_time_connected_text = UTIL.msToTime( client.average_connected_time )
-                    return client;
-                }));
+                vm.clients = vm.clients.concat(clients);
             } );
         }
 

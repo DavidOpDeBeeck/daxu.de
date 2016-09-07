@@ -1,14 +1,9 @@
 footer {
-  z-index: 2;
-
   display: flex;
   flex-direction: row;
-
   flex: none;
   overflow: hidden;
-
   padding: 5px;
-
   background-color: $footer-bg-color;
   border-top: 1px solid $footer-border-color;
 

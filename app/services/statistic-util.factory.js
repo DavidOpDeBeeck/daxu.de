@@ -1,75 +1,18 @@
 ( function () {
     'use strict'
     angular.module( 'daxude.services' )
-        .factory( "STAT_UTIL", statUtilFactory )
+        .factory( "StatUtils", statUtilFactory )
 
     function statUtilFactory ( $resource ) {
-
-        var factory = {
-            dayLabels : dayLabels,
-            dayNullArray : dayNullArray
+        return {
+            dayLabels() {
+                return Array
+                    .from( new Array(24), ( o , i ) => `${(i < 10) ? "0" + i : i}:00` );
+            },
+            dayNullArray() {
+                return Array
+                    .from( new Array(24), o => null );
+            }
         };
-
-        return factory;
-
-        ///////////////////
-
-        function dayLabels () {
-            return [
-                "00:00",
-                "01:00",
-                "02:00",
-                "03:00",
-                "04:00",
-                "05:00",
-                "06:00",
-                "07:00",
-                "08:00",
-                "09:00",
-                "10:00",
-                "11:00",
-                "12:00",
-                "13:00",
-                "14:00",
-                "15:00",
-                "16:00",
-                "17:00",
-                "18:00",
-                "19:00",
-                "20:00",
-                "21:00",
-                "22:00",
-                "23:00"
-            ];
-        };
-
-        function dayNullArray () {
-            return [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ];
-        }
     };
 } )();

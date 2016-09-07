@@ -52,7 +52,6 @@ body {
 
   main {
     position: relative;
-    z-index: 1;
     flex: 1;
 
     .container {
@@ -78,38 +77,39 @@ body {
       }
     }
 
-    .panel {
-      color: $primary-color;
-      font-weight: 600;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-
-      width: 100%;
-
-      background-color: $panel-bg-color;
-      border: 1px solid $panel-border-color;
-      box-shadow: 1px 1px 1px $header-shadow-color;
-
-      > .info, > .title {
-        padding: 12px 0;
-        margin: 0 10px;
-      }
-
-      > .info {
-        float: right;
-      }
-
-      > .title {
-        border-bottom: 1px solid $panel-border-color;
-      }
-
-      > .content {
-        padding: 0 5px;
-      }
-    }
-
     @media screen and (max-width: $break-xsmall) {
       width: 100%;
     }
   }
+
+  .panel {
+    color: $primary-color;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+
+    width: 100%;
+
+    background-color: $panel-bg-color;
+    border: 1px solid $panel-border-color;
+    box-shadow: 1px 1px 1px $header-shadow-color;
+
+    > .info, > .title {
+      padding: 12px 0;
+      margin: 0 10px;
+    }
+
+    > .info {
+      float: right;
+    }
+
+    > .title {
+      border-bottom: 1px solid $panel-border-color;
+    }
+
+    > .content {
+      padding: 0 5px;
+    }
+  }
+
 }

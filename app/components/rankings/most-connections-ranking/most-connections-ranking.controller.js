@@ -3,7 +3,7 @@
     angular.module( 'daxude.controllers' )
         .controller( "MostConnectionsRankingController", MostConnectionsRankingController );
 
-    function MostConnectionsRankingController ( API , UTIL ) {
+    function MostConnectionsRankingController ( API ) {
 
         let vm = this;
 
@@ -24,10 +24,7 @@
                 'limit'  : 10 ,
                 'offset' : vm.clients.length
             } , clients => {
-                vm.clients = vm.clients.concat(clients.map( client => {
-                    client.user_name = UTIL.findLargestOccurence( client.user_names );
-                    return client;
-                }));
+                vm.clients = vm.clients.concat(clients);
             } );
         }
 

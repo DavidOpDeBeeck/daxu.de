@@ -1,19 +1,19 @@
 ( function () {
     'use strict'
     angular.module( 'daxude.directives' )
-        .directive( "server", server );
+        .directive( "client", client );
 
-    function server () {
+    function client () {
         let directive = {
             restrict: 'E',
             scope: {
-                'serverInfo': '='
+                'clientInfo': '='
             },
             bindToController: true,
             replace: true,
-            controller: 'ServerController',
-            controllerAs: 'server',
-            templateUrl: 'assets/templates/server.html'
+            controller: 'ClientController',
+            controllerAs: 'client',
+            templateUrl: 'assets/templates/client.html'
         };
         return directive;
     }

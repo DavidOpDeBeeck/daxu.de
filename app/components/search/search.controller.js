@@ -3,7 +3,7 @@
     angular.module( 'daxude.controllers' )
         .controller( "SearchController", SearchController );
 
-    function SearchController ( API , UTIL ) {
+    function SearchController ( API , Utils ) {
 
         let vm = this;
 
@@ -36,8 +36,8 @@
               }, clients => {
                   if ( query === vm.query ) {
                     vm.clients = clients.map( client => {
-                        client.user_name = UTIL.findLargestOccurence( client.user_names );
-                        client.average_connected_time_text = UTIL.msToTime( client.average_connected_time );
+                        client.user_name = Utils.findLargestOccurence( client.user_names );
+                        client.average_connected_time_text = Utils.msToTime( client.average_connected_time );
                         client.last_connected = new Date( client.last_connected ).toLocaleString();
                         return client;
                     });

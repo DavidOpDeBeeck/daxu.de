@@ -1,21 +1,21 @@
 ( function () {
 	'use strict'
-	angular.module( 'daxude.directives' )
-		.directive( "clientGraph", clientGraph );
 
-	function clientGraph() {
-		let directive = {
-			scope: {
+	class ClientGraph {
+		constructor() {
+			this.scope = {
 				'online': '=',
 				'max': '='
 			},
-			bindToController: true,
-			replace: true,
-			restrict: 'E',
-			controller: 'OnlineClientsChartController',
-			controllerAs: 'clientGraph',
-			templateUrl: 'assets/templates/client-graph.html'
-		};
-		return directive;
+			this.bindToController = true,
+			this.replace = true,
+			this.restrict = 'E',
+			this.controller = 'ClientGraphController',
+			this.controllerAs = 'clientGraph',
+			this.templateUrl = 'assets/templates/client-graph.html'
+		}
 	}
+
+	angular.module( 'daxude.directives' )
+		.directive( "clientGraph", () => new ClientGraph() );
 } )();

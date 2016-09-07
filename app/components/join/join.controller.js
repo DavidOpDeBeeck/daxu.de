@@ -3,7 +3,7 @@
     angular.module( 'daxude.controllers' )
         .controller( "JoinController", JoinController );
 
-    function JoinController ( API , $routeParams ) {
+    function JoinController ( API , $stateParams ) {
 
         let vm = this;
 
@@ -21,8 +21,8 @@
         ///////////////////
 
         function activate() {
-            let virtualServerId = $routeParams[ "virtualServerId" ];
-            let password = $routeParams[ "password" ];
+            let virtualServerId = $stateParams[ "virtualServerId" ];
+            let password = $stateParams[ "password" ];
 
             API.LiveVirtualServer.get( {
                 id : virtualServerId

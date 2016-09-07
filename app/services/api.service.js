@@ -21,11 +21,7 @@
           ClientSearchUserNamePattern : $resource( apiUrl + "/search/client" , { userNamePattern : 'userNamePattern' } ) ,
           ClientSearchIdentifier      : $resource( apiUrl + "/search/client" , { identifier : 'identifier' } ) ,
           Report                      : $resource( apiUrl + "/report" ),
-          WhoAmI                      : $resource( apiUrl + "/whoami" ),
-          Survey                      : $resource( apiUrl + "/surveys/:id" , { id : '@id' } ),
-          SurveyVoted                 : $resource( apiUrl + "/surveys/:id/voted" , { id : '@id' } ),
-          SurveyVote                  : $resource( apiUrl + "/surveys/:id/votes", { id : '@id' } , { post: { method: 'POST' } } ),
-          SurveyResults               : $resource( apiUrl + "/surveys/:id/results" , { id : '@id' } )
+          WhoAmI                      : $resource( apiUrl + "/whoami" )
         }
 
     };

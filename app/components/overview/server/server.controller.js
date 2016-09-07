@@ -1,33 +1,16 @@
 ( function () {
     'use strict'
-    angular.module( 'daxude.controllers' )
-        .controller( "ServerController", ServerController );
 
-    function ServerController ( API , UTIL ) {
-
-        let vm = this;
-
-        ///////////////////
-
-        vm.id = vm.server.id;
-        vm.name = vm.server.name;
-        vm.online_clients = vm.server.online_clients;
-        vm.max_clients = vm.server.max_clients;
-        vm.clients = [];
-
-        ///////////////////
-
-        activate();
-
-        ///////////////////
-
-        function activate() {
-            API.LiveVirtualServerClients.query( { id : vm.id }, clients => {
-                vm.clients = clients.map( client => {
-                    client.time_connected_text = UTIL.msToTime(client.time_connected);
-                    return client;
-                });
-            });
+    class ServerController {
+        constructor(API) {
+            this.id = this.serverInfo.id;
+            this.name = this.serverInfo.name;
+            this.online_clients = this.serverInfo.online_clients;
+            this.max_clients = this.serverInfo.max_clients;
+            this.clients = API.LiveVirtualServerClients.query({ id : this.id });
         }
     }
+
+    angular.module( 'daxude.controllers' )
+        .controller( "ServerController", ServerController );
 } )();
