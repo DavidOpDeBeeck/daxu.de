@@ -1,0 +1,11 @@
+<section class="virtualserver-container">
+  <section class="virtualserver">
+    <h1 class="virtualserver-name">{{ ::virtualserver.name }}</h1>
+    <virtualserver-clients-graph id="virtualserver.id"></virtualserver-clients-graph>
+    <virtualserver-clients id="virtualserver.id"></virtualserver-clients>
+    <section class="virtualserver-more-info">
+      <a ui-sref="server.view({ id: virtualserver.id })">More Info</a>
+      <a ui-sref="server.join({ id: virtualserver.id })">Join</a>
+    </section>
+  </section>
+</section>

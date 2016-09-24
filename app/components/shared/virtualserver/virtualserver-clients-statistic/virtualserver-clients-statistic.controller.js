@@ -1,9 +1,9 @@
 ( function () {
     'use strict'
     angular.module( 'daxude.controllers' )
-        .controller( "OnlineClientsStatisticController", OnlineClientsStatisticController );
+        .controller( "VirtualserverClientsStatisticController", VirtualserverClientsStatisticController );
 
-    function OnlineClientsStatisticController ( API , StatUtils ) {
+    function VirtualserverClientsStatisticController ( API , StatUtils ) {
 
         let vm = this;
 
@@ -14,8 +14,9 @@
             data        : [],
             series      : [],
             options     : {
-                responsive          : true,
-                maintainAspectRatio : false
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: { display: true }
             }
         };
 
@@ -34,7 +35,8 @@
 
             API.Report.query({
                 'from' : nowMinusOneWeek,
-                'to'   : now.getTime()
+                'to'   : now.getTime(),
+                'virtualServer': vm.id
             }, reports => {
                 reports.forEach( report => {
                     reportDate = new Date( report.from ).toDateString();
