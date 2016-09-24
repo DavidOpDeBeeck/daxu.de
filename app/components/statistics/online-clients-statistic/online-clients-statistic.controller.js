@@ -15,7 +15,8 @@
             series      : [],
             options     : {
                 responsive          : true,
-                maintainAspectRatio : false
+                maintainAspectRatio : false,
+                legend: { display: true }
             }
         };
 

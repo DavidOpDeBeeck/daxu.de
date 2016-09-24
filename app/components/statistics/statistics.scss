@@ -3,6 +3,11 @@
   width: 100%;
   margin-bottom: 10px;
 
+  -webkit-user-select: none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -ms-user-select: none;
+
   &:last-child {
     margin-bottom: 0;
   }

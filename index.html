@@ -17,8 +17,10 @@
   </head>
   <body ng-app="daxude">
     <layout-header></layout-header>
-    <main class="ui-view-container">
-      <div class="container" ui-view ng-scrollbars ng-scrollbars-config="defaultScrollbar"></div>
+    <main>
+      <div class="container" ng-scrollbars ng-scrollbars-config="defaultScrollbar">
+        <ui-view></ui-view>
+      </div>
     </main>
     <layout-footer></layout-footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
