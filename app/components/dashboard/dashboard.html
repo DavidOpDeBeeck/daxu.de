@@ -1,5 +1,5 @@
-<section class="dashboard">
-  <virtualserver id="server.id"
+<section class="dashboard inner">
+  <virtualserver-simple id="server.id"
     ng-repeat="server in dashboard.virtualservers | orderBy : 'online_clients' : true">
-  </virtualserver>
+  </virtualserver-simple>
 </section>

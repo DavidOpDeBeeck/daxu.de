@@ -15,16 +15,16 @@
       </section>
   </section>
   <section class="search-results">
-    <section class="client" ng-repeat="client in search.clients | orderBy : search.orderProp : search.orderDirection() track by $index" ng-class="'ease-in'">
+    <section class="client" ng-repeat="client in search.clients | orderBy : search.orderProp : search.orderDirection() track by $index" ng-class="'fade'">
       <span class="operating-system" ng-repeat="occurrence in client.platforms">
         <i class="fa fa-windows" ng-if="occurrence.value == 'Windows'"></i>
         <i class="fa fa-apple" ng-if="occurrence.value == 'OS X' || occurrence.value == 'IOS'"></i>
         <i class="fa fa-android" ng-if="occurrence.value == 'Android'"></i>
       </span>
       <span class="username">{{ client.user_name }}</span>
-      <span class="connections">{{ client.total_connections }} total connections</span>
-      <span class="average-connected-time">{{ client.average_connected_time_text }} average connected time</span>
-      <span class="last-seen">Last seen on {{ client.last_connected }}</span>
+      <span class="connections"><span class="special">{{ client.total_connections }}</span> total connections</span>
+      <span class="average-connected-time"><span class="special">{{ client.average_connected_time_text }}</span> average connected time</span>
+      <span class="last-seen">Last seen on <span class="special">{{ client.last_connected }}</span></span>
     </section>
   </section>
 </section>

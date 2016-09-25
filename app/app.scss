@@ -1,42 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open Sans:400,600,700');
 
-/* COLORS */
-
-$brand-color: #363A42;
-$primary-color: #363A42;
-$secondary-color: #8D99AE;
-$primary-bg-color: #FFFFFF;
-
-$nav-color: #8D99AE;
-$nav-active-color: #363A42;
-
-$header-bg-color: #f2f2f2;
-$header-border-color: #EEEEEE;
-$header-shadow-color: #bfbfbf;
-
-$footer-bg-color: #f2f2f2;
-$footer-border-color: #cccccc;
-$footer-shadow-color: #bfbfbf;
-
-$panel-bg-color: #f2f2f2;
-$panel-border-color: #d9d9d9;
-$panel-border-color2: #e6e6e6;
-$panel-shadow-color: #bfbfbf;
-
-$circle-color: #cccccc;
-$circle-fill-color: #363A42;
-$circle-bg-color: #f2f2f2;
-
-$gold-color: #C98910;
-$silver-color: #A8A8A8;
-$bronze-color: #965A38;
-
-/* BREAKS */
-
-$break-xxsmall: 320px;
-$break-xsmall: 680px;
-$break-small: 1080px;
-
 /* BODY */
 
 body {
@@ -54,94 +17,12 @@ body {
     position: relative;
     flex: 1;
 
-    .container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-
-    .inner {
-      overflow: auto;
-      width: 1080px;
-      padding: 10px;
-      margin: auto;
-
-      @media screen and (max-width: $break-small) {
-        width: $break-xsmall;
-      }
-
-      @media screen and (max-width: $break-xsmall) {
-        width: 100%;
-      }
-    }
-
     @media screen and (max-width: $break-xsmall) {
       width: 100%;
     }
   }
 
-  .panel {
-    color: $primary-color;
-    font-weight: 600;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-
-    width: 100%;
-
-    background-color: $panel-bg-color;
-    border: 1px solid $panel-border-color;
-    box-shadow: 1px 1px 1px $header-shadow-color;
-
-    > .info, > .title {
-      padding: 12px 0;
-      margin: 0 10px;
-    }
-
-    > .info {
-      float: right;
-    }
-
-    > .title {
-      border-bottom: 1px solid $panel-border-color;
-    }
-
-    > .content {
-      padding: 0 5px;
-    }
-  }
-
   a {
     color: $primary-color;
-  }
-}
-
-/**
-*  ANIMATIONS
-*/
-
-[ui-view].ng-enter {
-  animation: 2s appear;
-}
-
-[ui-view].ng-leave {
-  animation: 1s disappear;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes disappear {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }

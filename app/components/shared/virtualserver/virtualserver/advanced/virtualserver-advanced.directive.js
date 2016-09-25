@@ -1,7 +1,7 @@
 ( function () {
   'use strict'
 
-  class Virtualserver {
+  class VirtualserverAdvanced {
     constructor() {
       this.restrict = 'E';
       this.scope = {
@@ -11,10 +11,10 @@
       this.replace = true;
       this.controller = 'VirtualserverController';
       this.controllerAs = 'virtualserver';
-      this.templateUrl = 'assets/templates/virtualserver.html';
+      this.templateUrl = 'assets/templates/virtualserver-advanced.html';
     }
   }
 
   angular.module( 'daxude.directives' )
-    .directive( "virtualserver", () => new Virtualserver() );
+    .directive( "virtualserverAdvanced", () => new VirtualserverAdvanced() );
 } )();

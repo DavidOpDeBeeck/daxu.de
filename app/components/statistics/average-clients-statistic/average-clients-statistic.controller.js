@@ -1,9 +1,9 @@
 ( function () {
     'use strict'
     angular.module( 'daxude.controllers' )
-        .controller( "OnlineClientsPerServerStatisticController", OnlineClientsPerServerStatisticController );
+        .controller( "AverageClientsStatisticController", AverageClientsStatisticController );
 
-    function OnlineClientsPerServerStatisticController ( API , StatUtils ) {
+    function AverageClientsStatisticController ( API , StatUtils ) {
 
         let vm = this;
 
@@ -16,16 +16,7 @@
             options     : {
                 responsive          : true,
                 maintainAspectRatio : false,
-                legend: { display: true },
-                scales: {
-                    yAxes: [{
-                       ticks: {
-                         min: 0,
-                         max: 10,
-                         stepWidth: 2
-                       }
-                     }]
-                }
+                legend: { display: true }
             }
         };
 

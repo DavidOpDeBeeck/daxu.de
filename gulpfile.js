@@ -46,7 +46,7 @@ gulp.task('concat-js', ['clean-js'], () => {
 
 gulp.task('concat-css', ['clean-css'], () => {
   return gulp
-    .src('./app/**/*.scss')
+    .src(['./app/**/_*.scss', './app/**/*.scss'])
     .pipe(concat('app.scss'))
     .pipe(gulp.dest('./assets/css/'));
 });

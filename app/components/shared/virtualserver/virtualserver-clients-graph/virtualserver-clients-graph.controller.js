@@ -13,7 +13,8 @@
                   labels  : [ 'Online Clients' , 'Open Slots' ],
                   options : {
                       responsive          : true,
-                      maintainAspectRatio : false
+                      maintainAspectRatio : false,
+                      legend: { display: true }
                   }
               }
             });

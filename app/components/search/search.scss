@@ -51,7 +51,7 @@
 
       > .client {
         padding: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
 
         background-color: $panel-bg-color;
         box-shadow: 1px 1px 1px $panel-shadow-color;
@@ -72,6 +72,7 @@
         }
 
         > .username {
+          word-wrap: break-word;
           margin-bottom: 5px;
         }
 
@@ -80,7 +81,11 @@
           color: $secondary-color;
           font-size: 0.65rem;
           padding: 2px;
-      }
+        }
+
+        .special {
+          color: $primary-color;
+        }
     }
   }
 }

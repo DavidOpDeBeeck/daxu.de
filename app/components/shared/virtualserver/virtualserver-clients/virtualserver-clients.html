@@ -3,7 +3,7 @@
     <i class="fa fa-search" aria-hidden="true"></i>
     <input type="text" placeholder="Search a client" ng-model="clients.filter" />
   </section>
-  <section class="virtualserver-client-list" ng-scrollbars>
+  <section class="virtualserver-client-list">
     <section class="virtualserver-client" ng-repeat="client in clients.clients | orderBy : 'time_connected' : true | filter : { user_name : clients.filter }">
       <i class="fa fa-user" aria-hidden="true"></i>
       <span class="client-username">{{ ::client.user_name | username }}</span>

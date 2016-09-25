@@ -1,0 +1,14 @@
+.inner {
+  overflow: auto;
+  width: 1080px;
+  margin: auto;
+  padding: 10px;
+
+  @media screen and (max-width: $break-small) {
+    width: $break-xsmall;
+  }
+
+  @media screen and (max-width: $break-xsmall) {
+    width: 100%;
+  }
+}
