@@ -2,6 +2,10 @@
 
 https://www.daxu.de
 
-## Installation
+## Deployement
 
-`> gulp`
+`> gulp deploy`
+
+## Development
+
+`> gulp dev`
