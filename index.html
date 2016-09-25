@@ -10,26 +10,16 @@
 
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
 
-    <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css" />
     <link rel="stylesheet" href="assets/css/app.css" />
   </head>
   <body ng-app="daxude">
     <layout-header></layout-header>
     <main>
-      <div ui-view class="container fade" ng-scrollbars ng-scrollbars-config="defaultScrollbar"></div>
+      <div ui-view class="container fade"></div>
     </main>
     <layout-footer></layout-footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/angular.chartjs/1.0.0/angular-chart.min.js"></script>
-    <script src="assets/js/scrollbar.min.js"></script>
+    <script src="assets/js/lib.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>

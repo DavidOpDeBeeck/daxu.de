@@ -2,7 +2,6 @@
     'use strict'
     angular.module( 'daxude', [
         'chart.js',
-        'ngScrollbars',
         'ngAnimate',
         'daxude.config',
         'daxude.controllers',

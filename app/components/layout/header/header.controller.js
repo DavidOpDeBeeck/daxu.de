@@ -37,7 +37,7 @@
         }
 
         function isVisible() {
-            if (!vm.visible && angular.element($window).innerWidth() > 680)
+            if (!vm.visible && angular.element($window).innerWidth > 680)
                 return true;
             return vm.visible;
         }

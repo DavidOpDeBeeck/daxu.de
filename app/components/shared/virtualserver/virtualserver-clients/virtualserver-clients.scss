@@ -35,6 +35,10 @@
       flex: none;
       border-bottom: 1px solid $panel-border-color;
 
+      &:last-child {
+        border-bottom: 0;
+      }
+
       > i, > span {
         color: $primary-color;
         font-size: 0.7rem;

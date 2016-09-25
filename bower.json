@@ -1,0 +1,25 @@
+{
+  "name": "daxude",
+  "description": "",
+  "main": "",
+  "authors": [
+    "David Op de Beeck"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DavidOpDeBeeck/daxu.de",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chart.js": "2.1.4",
+    "angular": "1.5.8",
+    "angular-resource": "1.5.8",
+    "angular-ui-router": "0.3.1",
+    "angular-animate": "1.5.8",
+    "angular-chart.js": "1.0.3"
+  }
+}

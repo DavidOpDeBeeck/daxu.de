@@ -27,11 +27,11 @@
 
         function activate() {
             API.ClientPlatforms.get( response => {
-                var data = response.toJSON();
-                $.each( data , ( key , value ) => {
-                    vm.graph.data[ 0 ].push( value );
-                    vm.graph.labels.push( key );
-                } );
+                var platforms = response.toJSON();
+                Object.keys(platforms).forEach(platform => {
+                    vm.graph.data[ 0 ].push( platforms[platform] );
+                    vm.graph.labels.push( platform );
+                });
             } );
         }
     }

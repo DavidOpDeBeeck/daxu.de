@@ -27,11 +27,11 @@
 
         function activate() {
             API.ClientCountries.get( response => {
-                var data = response.toJSON();
-                $.each( data , ( key , value ) => {
-                    vm.graph.data[ 0 ].push( value );
-                    vm.graph.labels.push( key );
-                } );
+                var countries = response.toJSON();
+                Object.keys(countries).forEach(country => {
+                    vm.graph.data[ 0 ].push( countries[country] );
+                    vm.graph.labels.push( country );
+                });
             } );
         }
     }

@@ -50,7 +50,7 @@
                     let totalPerDate = {};
 
                     reports.forEach( report => {
-                        reportDate = new Date( report.from ).toDateString();
+                        reportDate = new Date( report.from ).toDateString().slice(0, -5);
 
                         if (!reportsPerDate[reportDate]) {
                             reportsPerDate[reportDate] = 0;
