@@ -109,7 +109,7 @@ gulp.task('app-babel', ['app-concat-js'], babelJS);
 gulp.task('dev', ['clean', 'bower', 'app'], () => {
   gulp.watch('./app/**/*.scss', ['app-sass']);
   gulp.watch('./app/**/*.js', ['app-babel']);
-  gulp.watch('./app/**/*.html', ['move-templates']);
+  gulp.watch('./app/**/*.html', ['app-move-templates']);
 });
 
 gulp.task('deploy', ['bower', 'app'], cleanLeftOvers);

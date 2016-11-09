@@ -9,7 +9,10 @@
 
         ///////////////////
 
-        vm.brand = "Daxude";
+        vm.brand = {
+            primary: "Daxude",
+            secondary: "Teamspeak"
+        };
         vm.nav = {
             items     : [ { state : 'dashboard', text : 'Dashboard' },
                           { state : 'search', text : 'Search' },
