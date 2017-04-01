@@ -7,10 +7,10 @@
               id : this.id
             }, virtualserver => {
               let online = virtualserver.online_clients;
-              let open = virtualserver.max_clients - virtualserver.online_clients;
+              let free = virtualserver.max_clients - virtualserver.online_clients;
               this.graph = {
-                  data    : [ online , open ],
-                  labels  : [ 'Online Clients' , 'Open Slots' ],
+                  data    : [ online , free ],
+                  labels  : [ 'Online Clients' , 'Free Slots' ],
                   options : {
                       responsive          : true,
                       maintainAspectRatio : false,

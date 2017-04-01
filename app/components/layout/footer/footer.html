@@ -1,10 +1,68 @@
 <footer>
-  <span class="last-updated">{{ footer.lastUpdated }}</span>
-  <section class="status">
-    <span ng-class="footer.status.text">
-      <i class="fa" ng-class="footer.status.online ? 'fa-check' : 'fa-exclamation-triangle'" aria-hidden="true"></i>
-      {{ footer.status.text }}
-    </span>
-  </section>
-  <span class="version">version {{ footer.version }}</span>
+    <section class="links">
+        <h1>Links</h1>
+        <ul>
+            <li>
+                <a href="https://www.daxu.de">
+                    <span class="primary">Daxude</span>
+                    <span class="secondary">Portal</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.daxu.de">
+                    <span class="primary">Daxude</span>
+                    <span class="secondary">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ts.daxu.de">
+                    <span class="primary">Daxude</span>
+                    <span class="secondary">Teamspeak</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.swarm-viz.com">
+                    <span class="primary">Daxude</span>
+                    <span class="secondary">Swarm VIZ</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section class="social-media">
+        <h1>Social Media</h1>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/davidopdebeeck">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/DavidOpDeBeeck">
+                    <i class="fa fa-github-square" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Daxude">
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section class="information">
+        <h1>Information</h1>
+        <ul>
+            <li>
+                <span class="primary">Status</span>
+                <span class="secondary" ng-class="footer.status.text">{{ footer.status.text }}</span>
+            </li>
+            <li>
+                <span class="primary">Version</span>
+                <span class="secondary">{{ footer.version }}</span>
+            </li>
+            <li>
+                <span class="primary">Updated</span>
+                <span class="secondary">{{ footer.lastUpdated }}</span>
+            </li>
+        </ul>
+    </section>
 </footer>

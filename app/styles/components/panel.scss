@@ -1,23 +1,47 @@
 .panel {
-  color: $primary-color;
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-
   width: 100%;
+  margin-bottom: 10px;
 
-  background-color: $panel-bg-color;
-  border: 1px solid $panel-border-color;
-  box-shadow: 1px 1px 1px $header-shadow-color;
+  > .panel-header {
+    margin-bottom: 5px;
 
-  > .title {
-    padding: 12px 0;
-    margin: 0 10px;
+    > h1 {
+      color: $secondary-color;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
 
-    border-bottom: 1px solid $panel-border-color;
+      padding: 10px;
+
+      background-color: $panel-header-bg-color;
+      box-shadow: 1px 1px 1px $panel-header-shadow-color;
+
+      &.center {
+        text-align: center;
+      }
+    }
   }
 
-  > .content {
-    padding: 0 5px;
+  > .panel-body {
+    padding: 10px;
+    background-color: $panel-body-bg-color;
+  }
+
+  > .panel-footer {
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px 0;
+    margin-top: 5px;
+    border-top: 1px solid $panel-border-color;
+
+    a, span {
+      flex: 1;
+      color: $primary-color;
+      cursor: pointer;
+      font-size: 0.6rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
 }

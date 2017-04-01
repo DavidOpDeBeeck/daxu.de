@@ -14,9 +14,10 @@
             data        : [],
             series      : [],
             options     : {
+                animation           : false,
                 responsive          : true,
                 maintainAspectRatio : false,
-                legend: { display: true }
+                legend              : { display: true }
             }
         };
 

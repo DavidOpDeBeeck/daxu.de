@@ -4,7 +4,8 @@
   flex-wrap: wrap;
   padding: 10px 0;
 
-  .virtualserver-container {
+  .panel {  
+    padding: 0 5px;
     width: calc(100% / 3);
 
     @media screen and (max-width: $break-small) {

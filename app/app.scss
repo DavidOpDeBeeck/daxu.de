@@ -3,9 +3,6 @@
 /* BODY */
 
 body {
-  display: flex;
-  flex-direction: column;
-
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
 
@@ -14,7 +11,7 @@ body {
   background-color: $primary-bg-color;
 
   main {
-    position: relative;
+    overflow-y: auto;
     flex: 1;
 
     @media screen and (max-width: $break-xsmall) {
@@ -24,5 +21,9 @@ body {
 
   a {
     color: $primary-color;
+  }
+
+  .statistic canvas {
+    min-height: 225px;
   }
 }

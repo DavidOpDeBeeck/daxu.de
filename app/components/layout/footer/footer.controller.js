@@ -14,7 +14,7 @@
 			online : false
 		};
 		vm.lastUpdated;
-		vm.version = "2.0.0"
+		vm.version = "3.0.0"
 
 		///////////////////
 

@@ -10,7 +10,7 @@
         this.bindToController = true;
         this.replace = true;
         this.controller = 'VirtualserverClientsController';
-        this.controllerAs = 'clients';
+        this.controllerAs = 'virtualserver';
         this.templateUrl = 'assets/templates/virtualserver-clients.html';
       }
     }

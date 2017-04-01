@@ -14,8 +14,10 @@
             data        : [ [] ],
             series      : [ 'Clients' ],
             options     : {
+                animation           : false,
                 responsive          : true,
-                maintainAspectRatio : false
+                maintainAspectRatio : false,
+                legend: { display: true }
             }
         };
 

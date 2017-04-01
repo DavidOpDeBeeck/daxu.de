@@ -3,7 +3,7 @@
     angular.module( 'daxude.controllers' )
         .controller( "HeaderController", HeaderController );
 
-    function HeaderController ( $window , $scope ) {
+    function HeaderController ( $scope ) {
 
         let vm = this;
 
@@ -19,30 +19,13 @@
                           { state : 'stats', text : 'Statistics' },
                           { state : 'rankings', text : 'Rankings' } ],
             visible   : false,
-            toggle    : toggle,
-            isVisible : isVisible
+            toggle    : toggle
         };
 
         ///////////////////
 
-        activate();
-
-        ///////////////////
-
-        function activate() {
-            var w = angular.element($window);
-            $scope.$watch( () => $window.innerWidth, value => $scope.windowWidth = value, true );
-            w.bind( 'resize', () => $scope.$apply() );
-        }
-
         function toggle() {
-            vm.visible = !vm.visible;
-        }
-
-        function isVisible() {
-            if (!vm.visible && angular.element($window).innerWidth > 680)
-                return true;
-            return vm.visible;
+            this.visible = !this.visible;
         }
     }
 } )();

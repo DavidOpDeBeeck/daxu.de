@@ -1,67 +1,59 @@
-.virtualserver {
-  .virtualserver-client-list {
+.client-list {
+  display: flex;
+  flex-direction: column;
+
+  .client-search {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    flex: none;
+    border-bottom: 1px solid $panel-border-color;
 
-    .virtualserver-client-search {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    > i {
       flex: none;
-      border-bottom: 1px solid $panel-border-color;
-
-      > i {
-        flex: none;
-        font-size: 0.7rem;
-        padding: 10px;
-      }
-
-      > input {
-        flex: 1;
-
-        font-size: 0.7rem;
-        font-weight: 700;
-        text-transform: uppercase;
-
-        padding: 10px 5px 10px 0;
-
-        background-color: $panel-bg-color;
-      }
+      font-size: 0.7rem;
+      padding: 10px;
     }
 
-    .virtualserver-client {
-      display: flex;
-      flex-direction: row;
+    > input {
+      flex: 1;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 10px 5px 10px 0;
+      background-color: $panel-bg-color;
+    }
+  }
+
+  .client {
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    border-bottom: 1px solid $panel-border-color;
+
+    > i, > span {
+      color: $primary-color;
+      font-size: 0.7rem;
+      padding: 10px;
+    }
+
+    > i {
       flex: none;
-      border-bottom: 1px solid $panel-border-color;
+    }
 
-      &:last-child {
-        border-bottom: 0;
-      }
+    > span {
+      padding-left: 0;
+      text-transform: uppercase;
+    }
 
-      > i, > span {
-        color: $primary-color;
-        font-size: 0.7rem;
-        padding: 10px;
-      }
+    > .time-connected {
+      flex: none;
+    }
 
-      > i {
-        flex: none;
-      }
-
-      > span {
-        padding-left: 0;
-        text-transform: uppercase;
-      }
-
-      > .client-time-connected {
-        flex: none;
-      }
-
-      > .client-username {
-        flex: 1;
-        text-align: left;
-      }
+    > .username {
+      flex: 1;
+      text-align: left;
     }
   }
 }
+

@@ -1,6 +1,8 @@
 <section class="panel ranking">
-  <h1 class="title">Most Points</h1>
-  <section class="content">
+  <section class="panel-header">
+    <h1>Most Points</h1>
+  </section>
+  <section class="panel-body">
     <section class="client" ng-repeat="client in mostPointsRanking.clients" ng-class="{ 'gold' : $index === 0, 'silver' : $index === 1, 'bronze' : $index === 2}">
       <span>
         <i ng-show="$index < 3" class="fa fa-trophy" aria-hidden="true"></i>
@@ -9,7 +11,7 @@
       <span>{{ ::client.score | formatNumber }}</span>
     </section>
   </section>
-  <section class="load-more">
+  <section class="panel-footer">
     <span ng-click="mostPointsRanking.loadMore()">Load more</span>
   </section>
 </section>

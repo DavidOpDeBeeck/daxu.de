@@ -1,2 +1,2 @@
 angular.module("daxude.config")
-.constant("apiUrl", "https://www.daxu.de/sapphire/api/teamspeak/v1");
+.constant("apiUrl", "https://ts.daxu.de/api/v1");
