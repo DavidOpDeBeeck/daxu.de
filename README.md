@@ -1,6 +1,6 @@
 # daxu.de
 
-https://www.daxu.de
+https://ts.daxu.de
 
 ## Deployement
 
