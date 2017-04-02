@@ -26,7 +26,10 @@
 			API.LiveHost.get( host => {
 				vm.status.online = host.online;
 				vm.status.text = host.online ? 'online' : 'offline';
-				vm.lastUpdated = new Date( parseInt( host.last_updated ) ).toLocaleString()
+				vm.lastUpdated = new Date( parseInt( host.last_updated ) )
+					.toISOString()
+                    .replace('T', ' ')
+                    .replace('Z', '')
 			} );
 		}
 	}
