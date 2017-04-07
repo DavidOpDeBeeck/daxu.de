@@ -15,6 +15,7 @@
           ClientCountries             : $resource( apiUrl + "/stats/client_countries" ) ,
           ClientTopConnections        : $resource( apiUrl + "/stats/client_connections" ) ,
           ClientAverageConnectedTime  : $resource( apiUrl + "/stats/client_average_connected_time" ) ,
+          ClientTotalConnectedTime    : $resource( apiUrl + "/stats/client_total_connected_time" ) ,
           ClientTopScore              : $resource( apiUrl + "/stats/client_scores" ) ,
           ClientSearchUserName        : $resource( apiUrl + "/search/client" , { userName : 'userName' } ) ,
           ClientSearchUserNamePattern : $resource( apiUrl + "/search/client" , { userNamePattern : 'userNamePattern' } ) ,
